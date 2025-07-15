@@ -1,0 +1,22 @@
+<div class="p-3 sm:p-4 lg:p-6 bg-gray-800 text-gray-100 rounded-lg shadow-md max-h-80 sm:max-h-96 lg:max-h-[32rem] overflow-y-auto">
+  <p class="text-green-400 font-semibold text-sm sm:text-base lg:text-lg">JValerius:</p>
+  <p class="whitespace-pre-line text-gray-300 mb-3 sm:mb-4 lg:mb-6 text-sm sm:text-base lg:text-lg">
+    {{ prompt.split('\nIA:')[0].replace('JValerius: ', '') }}
+  </p>
+
+  <p class="text-blue-400 font-semibold text-sm sm:text-base lg:text-lg">VGrancito:</p>
+  <p class="whitespace-pre-line text-gray-300 text-sm sm:text-base lg:text-lg">
+    {{ prompt.split('\nIA:')[1] }}
+  </p>
+
+  <div class="flex space-x-3 sm:space-x-4 lg:space-x-6 text-gray-400 mt-3 sm:mt-4 lg:mt-6">
+    <button class="hover:text-white p-1 sm:p-1.5 lg:p-2 focus:outline-none focus:ring-2 focus:ring-primary-500" title="Editar">
+      <i class="bi bi-pencil-square text-sm sm:text-base lg:text-lg"></i>
+    </button>
+    <button class="hover:text-white p-1 sm:p-1.5 lg:p-2 focus:outline-none focus:ring-2 focus:ring-primary-500" title="Copiar" (click)="copiarAlPortapapeles()">
+      <i class="bi bi-copy text-sm sm:text-base lg:text-lg"></i>
+    </button>
+  </div>
+
+  <span *ngIf="copiado" class="ml-2 text-green-400 font-semibold text-xs sm:text-sm lg:text-base">¡Copiado!</span>
+</div>
