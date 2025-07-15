@@ -1,6 +1,7 @@
 [build]
   command = "npm run build"
-  publish = "dist/iacbcllamma"
+  publish = "dist/iacbcllamma/browser
+"
 
 [[redirects]]
   from = "/*"
